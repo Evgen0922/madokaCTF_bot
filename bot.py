@@ -1,4 +1,4 @@
-# By: @Kevgen0922
+# By: k3vg3n
 
 import telebot
 from telebot import types
