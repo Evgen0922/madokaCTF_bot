@@ -19,7 +19,7 @@ def get_team_json():
     # Устанавливаем соединение с сервером
     conn = http.client.HTTPSConnection(url)
     # Отправляем GET запрос
-    conn.request("GET", "/api/v1/teams/208457/")
+    conn.request("GET", "/api/v1/teams/--номер_команды--/")
     # Читаем и декодируем JSON данные
     team_json_data = json.loads(conn.getresponse().read().decode())
     conn.close()
@@ -162,7 +162,7 @@ def callback_worker(call):
 
   if call.data == "about_us":
     
-    msg = "Участники: \n\n`@wx0rx`  \\(веб, реверс, pwn\\)\n`@s4vaki`  \(форензика, ppc\)\n`@stunnerer`  \\(rev, форензика\\)\n`@Kevgen0922`  \\(стега, форензика\\)\n`@hikaru_kl`  \\(ppc\\)\n`@l1mpex`  \\(веб, стега, ppc\\)\n`@romtrap`  \\(pwn\\)"
+    msg = "Участники: --сокомандники--"
     bot.send_message(call.message.chat.id, msg, reply_markup=keyboard_delete_bot_message, parse_mode='MarkdownV2') 
 
 
